@@ -1,168 +1,127 @@
-.page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
+.head{
+  width: 100%;
+  height: fit-content;
+  list-style: none;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
+  flex-direction: column;
+  transition: all 0.3s ease-in-out cubic-bezier(0.075, 0.82, 0.165, 1);
+  margin-bottom: 10px;
 }
-
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
+.ull{
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  transform: scale(1);
+  transition: all 0.1s; 
+  cursor: default;
 }
-
-.main {
+.ull:hover{
+  gap: 100px;
+}
+.chg{
+  align-items: self-end;
+}
+.card{
+  margin-bottom: 60px;
+  width: 1000px;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+  background: linear-gradient(141deg, #3f3f3f,#141414);
+  border-radius: 20px;
+  box-shadow: -30px 30px 4px rgba(0, 0, 0, 0.9);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.card div{
+  display: flex;
+  width: 700px;
+  height: 600px;
+  border-radius: 0 20px 20px 0;
+  justify-content: center;
+  align-items: center;
+  justify-self: right;
+  background-color: #3f3f3f;
+}
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: -40px 40px 4px rgba(0, 0, 0, 0.9);
+}
+.card h2{
+  color: white;
+  font-size: 30px;
+  margin-top: 20px;
+  justify-self: left;
+  margin: 30px;
+}
+.card h3{
+  color: white;
+  font-size: 21px;
+  margin-top: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: lighter;
+  justify-self: left;
+  margin: 30px;
+}
+.cardcontainer1{
+  width: 60%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
-}
-
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
-}
-
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.ctas {
-  display: flex;
-  gap: 16px;
-}
-
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
-  display: flex;
+  gap: 60px;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
+  margin-top: 120px;
+  margin-bottom: 60px;
 }
-
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 158px;
-}
-
-.footer {
-  grid-row-start: 3;
+.cardcontainer2{
   display: flex;
-  gap: 24px;
-}
-
-.footer a {
-  display: flex;
+  margin-top: 118px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  overflow: hidden;
+  gap: 100px;
+  width: 100%;
 }
-
-.footer img {
-  flex-shrink: 0;
+.newcard{
+  transform: scale(0.7);
+  display: flex;
+  justify-content: right;
+  width: 1408px;
+  height: 593px;
+  background: radial-gradient(circle at 30% 80%, rgba(20,20,20,1) 0%, rgba(122,122,122,1) 100%);
+  border-radius: 79px;
+  transition: transform 500ms ease-in-out, box-shadow 500ms ease-in-out;
 }
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
+.newcardright{
+  width: 912.08px;
+  height: 593px;
+  background: linear-gradient(138deg, rgba(171,166,166,1) 0%, rgba(0,0,0,1) 100%);
+  border-radius: 0 79px 79px 0;
 }
-
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
-  .main {
-    align-items: center;
-  }
-
-  .main ol {
-    text-align: center;
-  }
-
-  .ctas {
-    flex-direction: column;
-  }
-
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
+.newcard:hover {
+  transform: scale(0.71);
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.9);
 }
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+.newcardleft{
+  align-self: last baseline;
+  width: 496px;
+  height: 593px;
+}
+.divhead{
+  width: 400px;
+  height: 50.02px;
+  margin-top: 55px;
+  margin-left: 79px;
+}
+.des{
+  margin-left: 85px;
+  width: 350px;
+}
+.des p {
+  letter-spacing: 2.7px;
 }
