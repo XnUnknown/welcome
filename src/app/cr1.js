@@ -17,6 +17,7 @@ I love building things—whether it&apos;s web apps&lsquo; animations&lsquo; or 
             <div className={style.newcardright}>
                 <Coins/>
             </div>
+            <div className= {style.waterMark}>XnU</div>
         </div>
         </>
     );

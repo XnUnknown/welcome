@@ -125,3 +125,16 @@
 .des p {
   letter-spacing: 2.7px;
 }
+.waterMark{
+  z-index:1000;
+  width:140px;
+  height:40px;
+  background: linear-gradient(138deg, rgba(171,166,166,1) 0%, rgba(0,0,0,1) 70%);
+   position:absolute;
+    margin-top:530px;
+    margin-right:20px; 
+    border-radius:79px 79px 79px 79px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
