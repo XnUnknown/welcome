@@ -58,16 +58,7 @@ const ThreeScene = () => {
       // Setup Animation Mixer
       // Play first animation by default
     });
-    loader.load("cube1.glb", (gltf) => {
-      const model = gltf.scene;
-      md1 = gltf.scene.children[0];
-      scene.add(model);
-      const mixer = new THREE.AnimationMixer(model);
-      setMixer(mixer);
-      md.position.z = 2;
-      // Setup Animation Mixer
-      // Play first animation by default
-    });
+    
     const clock = new THREE.Clock();
     const animate = () => {
       requestAnimationFrame(animate);
