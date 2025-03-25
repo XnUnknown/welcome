@@ -1,0 +1,18 @@
+{
+	"metadata": {
+		"version": 4.6,
+		"type": "Material",
+		"generator": "Material.toJSON"
+	},
+	"uuid": "eb6c3f2a-14d0-4803-81ba-ab6938cc8676",
+	"type": "MeshStandardMaterial",
+	"color": 10395294,
+	"roughness": 0.16,
+	"metalness": 1,
+	"emissive": 12763842,
+	"emissiveIntensity": 0,
+	"envMapRotation": [0,0,0,
+		"XYZ"],
+	"envMapIntensity": 1,
+	"blendColor": 0
+}

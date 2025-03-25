@@ -78,7 +78,7 @@
 }
 .cardcontainer2{
   display: flex;
-  margin-top: 118px;
+  margin-top: 80px;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: space-between;
@@ -102,10 +102,12 @@
   height: 593px;
   background: linear-gradient(138deg, rgba(171,166,166,1) 0%, rgba(0,0,0,1) 100%);
   border-radius: 0 79px 79px 0;
+  align-items: center;
+  justify-content: center;
 }
 .newcard:hover {
   transform: scale(0.71);
-  box-shadow: 0 0 50px rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 50px rgba(93, 103, 125, 0.9);
 }
 .newcardleft{
   align-self: last baseline;
@@ -124,6 +126,8 @@
 }
 .des p {
   letter-spacing: 2.7px;
+  font-size: 16px;
+  font-family: sans-serif;
 }
 .waterMark{
   z-index:1000;
@@ -137,4 +141,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+/* Hide scrollbar for all browsers */
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
 }

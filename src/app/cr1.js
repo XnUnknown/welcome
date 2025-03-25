@@ -17,7 +17,7 @@ I love building things—whether it&apos;s web apps, animations, or AI-powered p
             <div className={style.newcardright}>
                 <Coins/>
             </div>
-            <div className= {style.waterMark}>XnU</div>
+            <div className={style.waterMark}>XnU</div>
         </div>
         </>
     );

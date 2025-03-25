@@ -13,9 +13,11 @@
   "dependencies": {
     "@splinetool/react-spline": "^4.0.0",
     "export": "^0.1.337",
+    "gsap": "^3.12.7",
     "next": "15.2.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "three": "^0.174.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
