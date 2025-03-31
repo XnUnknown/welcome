@@ -1,5 +1,5 @@
 import style from './page.module.css';
-import Coins from './coins';
+import Coins from './rose.js';
 import BlurText from "./textanimation/blurtext.js";
 const cards = () => {
     return (
@@ -8,7 +8,7 @@ const cards = () => {
             <div style={{width: "700px", height: "100%", justifyContent:"center", alignItems:"center", display:"flex", flexDirection:"column"}}>
                 <div style={{width:"500px", display:"flex", flexDirection:"column", gap:"50px"}}>
                     <BlurText
-                            text="INNOVATING WITH CODE, CREATING WITH VISION."
+                            text="Blender"
                             delay={150}
                             animateBy="words"
                             direction="top"
@@ -16,7 +16,7 @@ const cards = () => {
                             textSize='2.5em'
                     />
                     <BlurText
-                        text="Tech meets creativity! From coding to VFX, I innovate, build, and bring ideas to life."
+                        text="Creating whatever I can imagine with Blender, where creativity knows no bounds." // Updated text
                         delay={180}
                         animateBy="words"
                         direction="top"

@@ -37,27 +37,37 @@ const ThreeScene = () => {
 
     // Add Ambient and Directional Light
 
-    const directionalLight1 = new THREE.DirectionalLight(0xffffff, 0.05);
+    const directionalLight1 = new THREE.DirectionalLight(0xffffff, 1);
     directionalLight1.position.set(-2, 3, -4);
     scene.add(directionalLight1);
-    const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.05);
+    const directionalLight2 = new THREE.DirectionalLight(0xffffff, 1);
     directionalLight1.position.set(2, 3, -4);
     scene.add(directionalLight2);
-    const directionalLight3 = new THREE.DirectionalLight(0xffffff, 0.05);
+    const directionalLight3 = new THREE.DirectionalLight(0xffffff, 1);
     directionalLight1.position.set(2, -3, -4);
     scene.add(directionalLight3);
     let md;
     const loader = new GLTFLoader();
-    loader.load("cube1.glb", (gltf) => {
+    loader.load("Art.glb", (gltf) => {
       const model = gltf.scene;
       md = gltf.scene.children[0];
       scene.add(model);
       const mixer = new THREE.AnimationMixer(model);
       setMixer(mixer);
       md.position.z = 1;
-      md.rotation.z = 3;
-      // Setup Animation Mixer
-      // Play first animation by default
+      md.position.y = -1;
+      md.rotation.z = -3;
+      md.scale.set(5, 5, 5);
+
+      // Add metallic reflection material
+      md.traverse((child) => {
+        if (child.isMesh) {
+          child.material.metalness = 1; // Set high metalness for metallic reflection
+          child.material.roughness = 0.2; // Slight roughness for realistic reflection
+          child.material.transparent = false; // Remove transparency
+          delete child.material.opacity; // Remove opacity property
+        }
+      });
     });
     
     const clock = new THREE.Clock();
@@ -70,17 +80,17 @@ const ThreeScene = () => {
           // md.rotation.y += 0.01;
           // md.rotation.x += 0.02;
           gsap.to(md.rotation, {
-            x: Math.PI / 6,
-            y: Math.PI / 6,
-            duration: 3,
+            x: 3.3,
+            y: -3.2,
+            duration: 4,
             ease: "power2.out",
           });
           md.position.y += Math.sin(clock.getElapsedTime()) * 0.001;
         } else {
           gsap.to(md.rotation, {
-            x: 1,
-            y: 0.3,
-            duration: 3,
+            x: 3.3,
+            y: -2.3,
+            duration: 4,
             ease: "power2.out",
           });
           // md.rotation.y += 0.01;

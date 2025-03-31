@@ -1,19 +1,32 @@
 import style from './page.module.css';
-import Coins from './cube';
+import Coins from './cube.js';
+import BlurText from "./textanimation/blurtext.js";
 const cards = () => {
     return (
         <>
-        <div className={style.newcard}>
-            <div className={style.newcardleft}>
-                <div className={style.divhead}>
-                    <h2>Skills & Expertise</h2>
-                </div>
-                <div className={style.des}>
-                    <p style={{marginTop:"60px"}}>I&apos;m a web development enthusiast, currently learning Full-Stack Development while building interactive and user-friendly websites. With expertise in After Effects, I create high-quality motion graphics, VFX, and cinematic edits. I also have strong skills in 3D modeling and animation using Blender, producing realistic renders. My deep understanding of technology, automation, and AI-driven projects helps me explore innovative solutions and push creative boundaries.</p>
+        <div style={{alignContent:"center", display:"flex", width:"1500px",height:"500px"}}>
+            <div style={{width: "700px", height: "100%", justifyContent:"center", alignItems:"center", display:"flex", flexDirection:"column"}}>
+                <div style={{width:"500px", display:"flex", flexDirection:"column", gap:"50px"}}>
+                    <BlurText
+                            text="THREEjs"
+                            delay={150}
+                            animateBy="words"
+                            direction="top"
+                            className="text-2xl mb-8"
+                            textSize='2.5em'
+                    />
+                    <BlurText
+                        text="Creating immersive 3D experiences with THREE.js, where imagination meets code."
+                        delay={180}
+                        animateBy="words"
+                        direction="top"
+                        className="text-2xl mb-8"
+                        textSize='1.1em'
+                    />
                 </div>
             </div>
-            <div className={style.newcardright}>
-                    <Coins/>
+            <div style={{width:"900px", height:"100%"}}>
+                <Coins/>
             </div>
         </div>
         </>

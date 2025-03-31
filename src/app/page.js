@@ -9,6 +9,7 @@ import Card4 from "./cards-4.js";
 import { useEffect, useState } from "react"; // Import useEffect and useState
 import Cr1 from "./cr1.js";
 import Cr2 from "./cr2.js";
+import Cr3 from "./cr3.js";
 import SmoothScroll from "./smoothscroll.jsx";
 
 export default function Home(){
@@ -37,7 +38,7 @@ export default function Home(){
         </div>
       </header>
         <div className={styles.cardcontainer2}>
-        <SmoothScroll components={[Cr1, Cr2]} />
+        <SmoothScroll components={[Cr1, Cr2, Cr3]} />
         </div>
       <main>
       </main>
